@@ -42,7 +42,7 @@
             "e.Context.Classes = Classes",
             "",
             "e:RunApp({",
-            "   Name = script.Parent.Parent.Name",
+            "   Name = script.Parent.Parent.Name,",
             "   Home = ${1:e.TextLabel(\"Hello world\")}",
             "})",
             ""
