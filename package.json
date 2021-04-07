@@ -1,0 +1,20 @@
+{
+    "name": "enoria-snippets",
+    "displayName": "Enoria Snippets",
+    "description": "Code snippets for Roblox Gui Lua Framework called Enoria",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "lua",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
