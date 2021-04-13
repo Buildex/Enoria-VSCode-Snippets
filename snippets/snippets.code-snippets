@@ -1,4 +1,137 @@
 {
+    "Enoria TextLabel": {
+        "prefix": ["e.TextLabel"],
+        "body": ["e.TextLabel(\"${1:}\")"]
+    },
+    "Enoria Container": {
+        "prefix": "e.Container",
+        "body": [
+            "e.Container({",
+            "   Child = ${1:}",
+            "})"
+        ]
+    },
+    "Enoria Column": {
+        "prefix": "e.Column",
+        "body": [
+            "e.Column({",
+            "   Children = {${1:}}",
+            "})"
+        ]
+    },
+    "Enoria Form": {
+        "prefix": "e.Form",
+        "body": [
+            "e.Form(${1:formKey}, {",
+            "   Child = ${2:}",
+            "})"
+        ]
+    },
+    "Enoria GridBuilder": {
+        "prefix": "e.GridBuilder",
+        "body": [
+            "e.GridBuilder(#${1:items}, function(index)",
+            "   return ${2:e.TextLabel(${1:items}[index])}",
+            "end)"
+        ]
+    },
+    "Enoria ListBuilder": {
+        "prefix": "e.ListBuilder",
+        "body": [
+            "e.ListBuilder(#${1:items}, function(index)",
+            "   return ${2:e.TextLabel(${1:items}[index])}",
+            "end)"
+        ]
+    },
+    "Enoria Row": {
+        "prefix": "e.Row",
+        "body": [
+            "e.Row({",
+            "   Children = {${1:}}",
+            "})"
+        ]
+    },
+    "Enoria TextButton": {
+        "prefix": ["e.TextButton"],
+        "body": [
+            "e.TextButton(\"${1:}\", {",
+            "   OnClick = function()",
+            "       ${2:}",
+            "   end",
+            "})"
+        ]
+    },
+    "Enoria ImageLabel": {
+        "prefix": ["e.ImageLabel"],
+        "body": ["e.ImageLabel(\"${1:}\")"]
+    },
+    "Enoria ImageButton": {
+        "prefix": ["e.ImageButton"],
+        "body": [
+            "e.ImageButton(\"${1:}\", {",
+            "   OnClick = function()",
+            "       ${2:}",
+            "   end",
+            "})"
+        ]
+    },
+    "Enoria PageLayout": {
+        "prefix": "e.PageLayout",
+        "body": [
+            "e.PageLayout({",
+            "   Children = {${1:}}",
+            "})"
+        ]
+    },
+    "Enoria ScrollContainer": {
+        "prefix": "e.ScrollContainer",
+        "body": [
+            "e.ScrollContainer({",
+            "   Child = ${1:}",
+            "})"
+        ]
+    },
+    "Enoria Stack": {
+        "prefix": "e.Stack",
+        "body": [
+            "e.Stack({",
+            "   Children = {${1:}}",
+            "})"
+        ]
+    },
+    "Enoria TextBox": {
+        "prefix": "e.TextBox",
+        "body": [
+            "e.TextBox({",
+            "   PlaceholderText = \"${1:}\"",
+            "})"
+        ]
+    },
+    "Enoria TextFormField": {
+        "prefix": "e.TextFormField",
+        "body": [
+            "e.TextFormField({",
+            "   PlaceholderText = \"${1:}\",",
+            "   Validator = function(value)",
+            "       if string.len(value) <= 0 then",
+            "           return \"${2:Must not be empty.}\"",
+            "       end",
+            "       return nil",
+            "   end,",
+            "   BuildErrorLabel = function(validationError)",
+            "       return e.TextLabel(validationError)",
+            "   end",
+            "})"
+        ]
+    },
+    "Enoria VerticalSpacer": {
+        "prefix": "e.VerticalSpacer",
+        "body": "e.VerticalSpacer(${1:})"
+    },
+    "Enoria HorizontalSpacer": {
+        "prefix": "e.HorizontalSpacer",
+        "body": "e.HorizontalSpacer(${1:})"
+    },
     "Enoria Stateful Widget": {
         "prefix": ["stateful"],
         "body": [
@@ -34,7 +167,7 @@
         "prefix": ["runapp", "main", "app"],
         "body": [
             "local Enoria = require(game.ReplicatedStorage.Common.Enoria.packages.Enoria.Enoria)",
-            "local CustomTheme = require(script.Parent.Parent.style.Theme",
+            "local CustomTheme = require(script.Parent.Parent.style.Theme)",
             "local Classes = require(script.Parent.Parent.style.Classes)",
             "",
             "local e = Enoria.new()",
