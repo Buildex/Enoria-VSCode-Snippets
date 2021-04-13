@@ -4,7 +4,7 @@
     "publisher": "Buildex",
     "description": "Code snippets for Roblox Gui Lua Framework called Enoria",
     "version": "0.2.1",
-    "icon": "./enoria.png",
+    "icon": "enoria.png",
     "repository": {
         "url": "https://github.com/Buildex/Enoria-VSCode-Snippets.git"
     },
