@@ -135,8 +135,8 @@
     "Enoria Stateful Widget": {
         "prefix": ["stateful"],
         "body": [
-            "local e = require(_G.EnoriaPath)",
-            "local Widget = require(_G.EnoriaPath.Parent.Widgets.Widget)",
+            "local e = require(game.ReplicatedStorage.Common.Enoria.packages.Enoria.Enoria)",
+            "local Widget = require(game.ReplicatedStorage.Common.Enoria.packages.Enoria.Widget)",
             "",
             "local ${1:name} = {}",
             "${1:name}.__index = ${1:name}",
@@ -167,12 +167,14 @@
         "prefix": ["runapp", "main", "app"],
         "body": [
             "local Enoria = require(game.ReplicatedStorage.Common.Enoria.packages.Enoria.Enoria)",
-            "local CustomTheme = require(script.Parent.Parent.style.Theme)",
+            "",
+            "-- If you want to add custom styles:",
+            "--local CustomTheme = require(script.Parent.Parent.style.Theme)",
             "local Classes = require(script.Parent.Parent.style.Classes)",
             "",
             "local e = Enoria.new()",
-            "e.Context.Theme = CustomTheme",
-            "e.Context.Classes = Classes",
+            "--e.Context.Theme = CustomTheme",
+            "--e.Context.Classes = Classes",
             "",
             "e:RunApp({",
             "   Name = script.Parent.Parent.Name,",
